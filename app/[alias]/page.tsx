@@ -1,7 +1,13 @@
 import getAlias from "@/lib/getAlias";
 import { redirect } from "next/navigation";
 
-export default async function ShortUrlPage({ params }: { params: { alias: string } }) {
+interface Props {
+    params: {
+        alias: string;
+    };
+}
+
+export default async function ShortUrlPage({ params }: Props) {
     const { alias } = params;
     const site = await getAlias(alias);
     if (!site) {
