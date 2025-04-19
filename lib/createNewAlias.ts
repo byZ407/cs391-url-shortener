@@ -27,7 +27,7 @@ export default async function createNewAlias(
         return "Invalid alias: This alias already exists";
     }
 
-    const base = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`;
+    const base = process.env.VERCEL_URL ? `https://https://my-cs391-url-shortener.vercel.app` : `http://localhost:${process.env.PORT || 3000}`;
     const shortUrl = `${base}/${alias}`;
 
     const p = {url, alias, shortUrl};
